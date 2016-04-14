@@ -11,8 +11,6 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 import com.udacity.gradle.jokes.JokeSupplier;
 
-import javax.inject.Named;
-
 /** An endpoint class we are exposing */
 @Api(
   name = "myApi",
@@ -28,8 +26,8 @@ public class MyEndpoint {
 
 
     /** A simple endpoint method that takes a name and says Hi back */
-    @ApiMethod(name = "sayHi")
-    public MyBean sayHi(@Named("name") String name) {
+    @ApiMethod(name = "tellJoke")
+    public MyBean tellJoke() {
         MyBean response = new MyBean();
         response.setData(jokeSupplier.getJoke());
         return response;
