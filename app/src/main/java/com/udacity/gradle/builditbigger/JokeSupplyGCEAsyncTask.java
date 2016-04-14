@@ -27,8 +27,7 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Pair<Context, String>, Void, Stri
     protected void onPreExecute(){
         pDialog = new ProgressDialog(context);
         pDialog.setCancelable(false);
-        pDialog.setTitle("Updating Content");
-        pDialog.setMessage("Trying to fetch a new funny joke from server");
+        pDialog.setMessage("Fetch a new joke");
         pDialog.show();
     }
 
