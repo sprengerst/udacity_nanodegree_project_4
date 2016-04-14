@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -16,6 +17,20 @@ import stefan.sprenger.jokesupplier.myApi.MyApi;
 class JokeSupplyGCEAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
+    private ProgressDialog pDialog ;
+
+    public JokeSupplyGCEAsyncTask(Context context) {
+        this.context = context;
+    }
+
+    @Override
+    protected void onPreExecute(){
+        pDialog = new ProgressDialog(context);
+        pDialog.setCancelable(false);
+        pDialog.setTitle("Updating Content");
+        pDialog.setMessage("Trying to fetch a new funny joke from server");
+        pDialog.show();
+    }
 
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
@@ -52,6 +67,9 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Pair<Context, String>, Void, Stri
     @Override
     protected void onPostExecute(String result) {
 //        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        if( null != pDialog)
+            pDialog.dismiss();
+
         Intent jokeShowIntent = new Intent(context, JokeShowActivity.class);
         jokeShowIntent.putExtra("JOKE_ID", result);
         context.startActivity(jokeShowIntent);
