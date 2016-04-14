@@ -1,15 +1,16 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Pair;
-import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 
 import java.io.IOException;
 
+import stefan.sprenger.jokeandroidlibrary.JokeShowActivity;
 import stefan.sprenger.jokesupplier.myApi.MyApi;
 
 class JokeSupplyGCEAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> {
@@ -50,6 +51,9 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Pair<Context, String>, Void, Stri
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+//        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        Intent jokeShowIntent = new Intent(context, JokeShowActivity.class);
+        jokeShowIntent.putExtra("JOKE_ID", result);
+        context.startActivity(jokeShowIntent);
     }
 }
