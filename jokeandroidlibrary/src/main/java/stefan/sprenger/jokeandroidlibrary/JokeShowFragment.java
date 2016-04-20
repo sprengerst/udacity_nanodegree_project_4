@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class JokeShowFragment extends Fragment {
 
     public JokeShowFragment() {
@@ -28,15 +25,6 @@ public class JokeShowFragment extends Fragment {
         if (arguments != null) {
             String libraryJoke = arguments.getString("JOKE_ID");
             jokeView.setText(libraryJoke);
-//
-//        AdView mAdView = (AdView) root.findViewById(R.id.adView);
-//        // Create an ad request. Check logcat output for the hashed device ID to
-//        // get test ads on a physical device. e.g.
-//        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
-//        AdRequest adRequest = new AdRequest.Builder()
-//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .build();
-//        mAdView.loadAd(adRequest);
         }
 
         return root;

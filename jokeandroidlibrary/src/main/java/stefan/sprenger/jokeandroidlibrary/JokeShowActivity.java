@@ -1,8 +1,11 @@
+/*
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
+
 package stefan.sprenger.jokeandroidlibrary;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
 
 
 public class JokeShowActivity extends AppCompatActivity {
@@ -14,7 +17,7 @@ public class JokeShowActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             Bundle arguments = new Bundle();
-            arguments.putString("JOKE_ID", getIntent().getStringExtra("JOKE_ID"));
+            arguments.putString(getString(R.string.joke_id_key), getIntent().getStringExtra(getString(R.string.joke_id_key)));
 
             JokeShowFragment fragment = new JokeShowFragment();
             fragment.setArguments(arguments);
@@ -24,29 +27,4 @@ public class JokeShowActivity extends AppCompatActivity {
                     .commit();
         }
     }
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-
-
 }

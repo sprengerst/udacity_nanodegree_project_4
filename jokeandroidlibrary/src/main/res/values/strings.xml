@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JokeAndroidLibrary</string>
+    <string name="joke_id_key">JOKE_ID</string>
 </resources>

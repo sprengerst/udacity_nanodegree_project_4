@@ -1,14 +1,17 @@
+
+<!--
+  ~ Copyright (c) 2016. by Stefan Sprenger
+  -->
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JokeShowFragment">
 
-    <TextView android:text="DEMO TEXT"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/joke_view_text_view"
         />
-
-
 </FrameLayout>
