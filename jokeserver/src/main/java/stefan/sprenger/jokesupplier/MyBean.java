@@ -1,6 +1,9 @@
+/*
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
+
 package stefan.sprenger.jokesupplier;
 
-/** The object model for the data we are sending through endpoints */
 public class MyBean {
 
     private String myData;

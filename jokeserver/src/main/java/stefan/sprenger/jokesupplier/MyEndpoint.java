@@ -1,8 +1,7 @@
+
 /*
-   For step-by-step instructions on connecting your Android application to this backend module,
-   see "App Engine Java Endpoints Module" template documentation at
-   https://github.com/GoogleCloudPlatform/gradle-appengine-templates/tree/master/HelloEndpoints
-*/
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
 
 package stefan.sprenger.jokesupplier;
 
@@ -11,7 +10,6 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 import com.udacity.gradle.jokes.JokeSupplier;
 
-/** An endpoint class we are exposing */
 @Api(
   name = "myApi",
   version = "v1",
@@ -24,8 +22,6 @@ import com.udacity.gradle.jokes.JokeSupplier;
 public class MyEndpoint {
     private JokeSupplier jokeSupplier = new JokeSupplier();
 
-
-    /** A simple endpoint method that takes a name and says Hi back */
     @ApiMethod(name = "tellJoke")
     public MyBean tellJoke() {
         MyBean response = new MyBean();
