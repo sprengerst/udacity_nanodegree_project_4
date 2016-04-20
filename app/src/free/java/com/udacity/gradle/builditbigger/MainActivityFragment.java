@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
+
 package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
@@ -10,10 +14,6 @@ import android.widget.Button;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-
-/**
- * A placeholder fragment containing a simple view.
- */
 public class MainActivityFragment extends Fragment {
 
     public MainActivityFragment() {

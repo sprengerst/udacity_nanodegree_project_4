@@ -23,7 +23,7 @@ public class JokeShowFragment extends Fragment {
         Bundle arguments = getArguments();
 
         if (arguments != null) {
-            String libraryJoke = arguments.getString("JOKE_ID");
+            String libraryJoke = arguments.getString(getContext().getString(R.string.joke_id_key));
             jokeView.setText(libraryJoke);
         }
 

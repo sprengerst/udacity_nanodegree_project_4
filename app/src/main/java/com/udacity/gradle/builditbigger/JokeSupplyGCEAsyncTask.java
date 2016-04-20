@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
+
 package com.udacity.gradle.builditbigger;
 
 import android.app.ProgressDialog;
@@ -22,13 +26,12 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Void, Void, String> {
         this.context = context;
     }
 
-
     @Override
     protected void onPreExecute(){
         if(context != null) {
             pDialog = new ProgressDialog(context);
             pDialog.setCancelable(false);
-            pDialog.setMessage("Fetch a new joke");
+            pDialog.setMessage(context.getString(R.string.waiting_joke_dialog));
             pDialog.show();
         }
     }
@@ -37,7 +40,7 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... params) {
         if(myApiService == null) {
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("https://nanodegreeproject4.appspot.com/_ah/api/");
+                    .setRootUrl(context.getString(R.string.appspot_url));
             myApiService = builder.build();
         }
 
@@ -55,7 +58,7 @@ class JokeSupplyGCEAsyncTask extends AsyncTask<Void, Void, String> {
 
         if(context!=null) {
             Intent jokeShowIntent = new Intent(context, JokeShowActivity.class);
-            jokeShowIntent.putExtra("JOKE_ID", result);
+            jokeShowIntent.putExtra(context.getString(R.string.joke_id_key), result);
             context.startActivity(jokeShowIntent);
         }
     }

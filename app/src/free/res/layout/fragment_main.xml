@@ -1,3 +1,8 @@
+
+<!--
+  ~ Copyright (c) 2016. by Stefan Sprenger
+  -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
