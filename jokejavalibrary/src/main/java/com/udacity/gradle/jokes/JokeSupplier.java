@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2016. by Stefan Sprenger
+ */
+
 package com.udacity.gradle.jokes;
 
 import java.util.Random;

@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javaJokes/javaJokes.iml" filepath="$PROJECT_DIR$/javaJokes/javaJokes.iml" />
       <module fileurl="file://$PROJECT_DIR$/jokeandroidlibrary/jokeandroidlibrary.iml" filepath="$PROJECT_DIR$/jokeandroidlibrary/jokeandroidlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokejavalibrary/javaJokes.iml" filepath="$PROJECT_DIR$/jokejavalibrary/javaJokes.iml" />
       <module fileurl="file://$PROJECT_DIR$/jokeserver/jokeserver.iml" filepath="$PROJECT_DIR$/jokeserver/jokeserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/udacity_nanodegree_project_4.iml" filepath="$PROJECT_DIR$/udacity_nanodegree_project_4.iml" />
     </modules>

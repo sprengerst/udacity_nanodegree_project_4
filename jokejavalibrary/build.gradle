@@ -24,8 +24,6 @@ line:
 
 */
 
-sourceCompatibility = 1.7
-
 /*
 
 We can now create our joke telling library. We'll create a file at
